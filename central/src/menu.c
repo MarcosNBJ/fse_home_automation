@@ -73,7 +73,7 @@ void printDeviceToMenu(Data data) {
 	wattroff(window, COLOR_PAIR(1));
 
 	wattron(window, COLOR_PAIR(data.devices.playing == 1 ? 3 : 2));
-	mvwprintw(window, 14, 2, "ALARM ACTIVE: %s", data.devices.playing == 1 ? "YES " : "NO");
+	mvwprintw(window, 14, 2, "ALARM ACTIVE: %s", data.devices.playing == 1 ? "YES " : "NO ");
 	wattroff(window, COLOR_PAIR(data.devices.playing == 1 ? 3 : 2));
 
   wrefresh(window);
