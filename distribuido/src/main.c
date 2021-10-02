@@ -5,16 +5,16 @@
 #include "server.h"
 #include "gpio.h"
 #include "quit.h"
-#include "i2c.h"
+#include "dht22.h"
 
 int main() {
 
 	//registering Ctrl+C to quit function
 	signal(SIGINT,quit);
 
-	//initializing GPIO and I2C
+	//initializing GPIO and dht22
 	initGPIO();
-	initI2C();
+	initDht22();
 
 	//setting off all devices, in case there were any on before the launch
 	setAllOff();
